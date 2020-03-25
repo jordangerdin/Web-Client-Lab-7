@@ -1,0 +1,18 @@
+What does this Vue error message mean? What causes it, and how do you fix it?
+
+#####################################################################################
+
+[Vue warn]: Property or method "total" is not defined on the instance vue.js:634
+but referenced during render. Make sure that this property is reactive, either in
+the data option, or for class-based components, by initializing the property. See:
+https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.
+
+(found in <Root>)
+
+#####################################################################################
+
+	This error message is caused by the missing variable in the Vue objects data.
+In the vue_shopping_cart.html code, opening the page without the computed/filters 
+sections that give a value to "total", but calling on it in the template #app causes
+this error. It's fixed by giving some value to the property which in this case is by
+properly calculating the value based on other data in the table.
